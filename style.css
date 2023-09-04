@@ -76,7 +76,10 @@
   display: block;
 }
 
-
+.nav-list.active {
+  display: flex;
+  flex-direction: column;
+}
 
 .submenu li {
     padding: 20px 50px;
@@ -116,11 +119,15 @@
   
 }
 
-
+.submenu2 .menu-foto-hori img{
+  max-width: 160px;
+  height: auto;
+}
 
 .subimg{
   font-size: 20px;
   color: #fff;
+  text-shadow: 1px 2px 4px black;
  
 }
 
@@ -133,58 +140,71 @@
   border-radius: 5px;
   padding: 10px 0;
 }
+.hamburger {
+  display: none;
+}
 /* ----HAMBURGUESA MOVIL------ */
 
+/* Estilos para la versión responsive */
+@media screen and (max-width: 768px) {
+  .nav {
+    justify-content: flex-end; /* Colocar el icono a la derecha */
+  }
 
-/* Styles for desktop version */
-.hamburger {
-    display: none;
-}
-
-/* Display navigation list for desktop */
-@media (min-width: 769px) {
-    .nav-list {
-        display: flex;
-    }
-  
-    
-}
-
-/* Display hamburger icon for mobile */
-@media (max-width: 768px) {
-  .nav-list.active li:hover .submenu2 {
+  .hamburger {
     display: block;
-    max-height: 200px; /* Establece una altura máxima para el scroll */
-    overflow-y: auto; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
-}
-    .menu-prueba-p{
-     
-     font-size: 15px;
-    }
-    .nav-list.active li .submenu2 a:focus,
-    .nav-list.active li .submenu2 a:hover {
-        display: none; /* Ocultar los submenús al hacer clic o enfocar */
-    }
+    cursor: pointer;
+    margin-right: 20px; /* Espacio entre el icono y el borde derecho */
+  }
 
-    .nav-list.active {
-        display: flex;
-        flex-direction: column; 
-    }
+  .nav-list {
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajusta según sea necesario */
+    right: -100%; /* Cambia "left" a "right" */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Color de fondo */
+    transition: right 0.3s ease-in-out; /* Cambia "left" a "right" */
+  }
 
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        font-size: 25px;
-        padding: 20px;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
+  .nav-list.active {
+    right: 0; /* Cambia "left" a "right" */
+  }
+
+  .nav-list li {
+    margin: 10px 0;
+  }
+  .menu-prueba-img {
+    max-width: 100%; /* Ajusta el ancho máximo de las imágenes al 100% del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
+  }
+
+  .menu-prueba-p {
+    font-size: 14px; /* Tamaño de fuente más pequeño para el texto */
+  }
+  .submenu2 li {
+    padding: 20px 50px;
+  }
+  .submenu2 .menu-foto-hori {
+    display: none;
+  }
+  .menu-prueba-p {
+    display: none;
+  }
+  .subimg{
+    text-shadow: 1px 2px 4px black;
 }
 
-.menu-prueba-img{
-    width: 150px;
+
+
 }
+
+
+  
+  
+
+
+
 
 /* BANNER EFECTO NIEBLA------- */
 
@@ -607,7 +627,6 @@ i{
   padding: 15px;
   margin: 10px;
 }
-
 
 
 }
@@ -1147,5 +1166,13 @@ html {
     }
     .footer .row a i{
     margin:0% 3%;
+    }
+    .footer .row .ircasa{
+      
+      
+      color: orange;
+      font-size: 15px;
+      border: 1px solid orange;
+      padding: 8px;
     }
     }

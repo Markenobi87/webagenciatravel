@@ -532,7 +532,11 @@ h2{
   }
   .h-lunademiel{
     padding: 90px 25px;
+    font-size: 40px;
 
+  }
+  .card{
+    padding: 0;
   }
 
 
@@ -764,6 +768,8 @@ textarea {
   #form_button {
     padding: 15px 25px;
   }
+  
+ 
 }
 
 @media screen and (max-width: 420px) {
@@ -783,6 +789,7 @@ textarea {
   input[type='text'], [type='email'], select, textarea {
     font-size: 0.875em;
   }
+ 
 }
 
 
