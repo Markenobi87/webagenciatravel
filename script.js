@@ -1,3 +1,7 @@
+
+// MENU DESPEGABLE
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navList = document.querySelector('.nav-list');
