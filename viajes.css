@@ -1,0 +1,978 @@
+*{
+    margin: 0;
+    font-family: 'Lato', sans-serif;;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el nav esté encima del contenido */
+   
+}
+.logo-nav {
+    width: 140px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1; /* Permite que los elementos restantes ocupen el espacio restante */
+}
+
+.nav-list li .men {
+    font-size: 25px;
+    text-decoration: none;
+    color:black;
+    font-weight: 400;
+}
+
+/* -----------SUBMENU NAV---------------- */
+
+
+.submenu {
+    position: absolute;
+    background-color: rgba(136, 135, 131, 0.404);
+    display: none;
+    z-index: 1;
+    border-radius: 10px;
+    padding-bottom: 29px;
+}
+
+.nav-list li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    padding: 20px 50px;
+    
+    
+}
+
+.subimg a{
+    font-size: 30px;
+    color: #fff;
+}
+
+
+
+.submenu .sub {
+    color: #fdfcfc;
+    font-weight: 400;
+    text-shadow: 1px 2px black;
+}
+
+.submenu .sub:hover{
+    padding-left: 2px;
+    text-shadow: 2px 2px 7px rgb(18, 10, 10);
+    
+}
+
+/* ---- MOVIL------ */
+
+
+@media (max-width: 768px){
+    .nav-list li .men {
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+     
+      
+       
+    }
+    .logo-nav {
+      width: 0;
+      
+    }
+    .nav-list{
+        display: flex;
+       justify-content: flex-start;
+    
+    }
+
+    nav.nav{
+     
+        padding: 20px;
+    }
+}
+/* ----HAMBURGUESA MOVIL------ */
+
+
+
+.hamburger {
+  display: none;
+}
+
+
+@media (min-width: 769px) {
+  .nav-list {
+      display: flex;
+  }
+
+  
+}
+
+/* Display hamburger icon for mobile */
+@media (max-width: 768px) {
+.nav-list.active li:hover .submenu2 {
+  display: block;
+  max-height: 200px; 
+  overflow-y: auto; 
+}
+  .menu-prueba-p{
+   
+   font-size: 15px;
+  }
+  .nav-list.active li .submenu2 a:focus,
+  .nav-list.active li .submenu2 a:hover {
+      display: none;
+  }
+
+  .nav-list.active {
+      display: flex;
+      flex-direction: column; 
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+      font-size: 25px;
+      padding: 20px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+  }
+}
+
+.menu-prueba-img{
+  width: 150px;
+}
+
+
+/* seccion principal */
+
+.principal{
+    position: relative;
+    background-image: url(./asset/prinicpañasia.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    color: white;
+}
+
+.principal2{
+    position: relative;
+    background-image: url(./asset/principalocenaia.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    color: white;
+}
+.principal3{
+    position: relative;
+    background-image: url(./asset/africa.principal.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    color: white;
+}
+.principal4{
+    position: relative;
+    background-image: url(./asset/prinicpalamerica.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    color: white;
+}
+.principal5{
+    position: relative;
+    background-image: url(./asset/principaleuropa.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    color: white;
+}
+
+
+.principal6{
+    position: relative;
+    background-image: url(./asset/couple3jpg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+    color: white;
+}
+
+.caja-titulo{
+    margin-top: 200px;
+    border-top:1px solid white ;
+    border-bottom: 1px solid white;
+    padding: 5px 35px;
+}
+
+.caja-titulo2{
+    margin-top: 300px;
+    border-top:1px solid white ;
+    border-bottom: 1px solid white;
+    padding: 5px 35px;
+}
+
+
+h2{
+  font-size: 40px; 
+}
+
+@media (max-width: 768px){
+    .principal{
+        background-size: cover;
+    }
+}
+
+
+/* section viajes  */
+
+.titulo-principal{
+    margin: 60px;
+    display: flex;
+    justify-content: center;
+    font-size: 55px;
+   font-weight: 100;
+    color: rgb(220, 114, 7);
+    }
+
+
+.foto-viaje{
+    box-shadow: 1px 4px 5px rgb(58, 53, 53);
+    border-radius: 3px;
+}
+
+
+
+.caja-viajes {
+    display: flex;
+    padding: 80px;
+    align-items: center;
+}
+
+.descripcion {
+    letter-spacing:2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 300px; /* Espaciado horizontal en la descripción */
+}
+
+.descripcion .pais {
+    margin-bottom: 29px;
+    font-size: 45px;
+    color: rgb(240, 107, 31);
+    
+}
+
+.descripcion .tiempo {
+    margin: 10px;
+
+}
+.caja-precio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+   width: 100px;
+   height: 40px;
+   background-color: orange;
+  
+}
+
+.descripcion i{
+   padding: 3px;
+}
+
+@media (max-width: 768px) {
+    .caja-viajes {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .descripcion {
+        padding: 20px;
+    }
+}
+/* ----- caja2-------- */
+
+
+
+
+.caja-viajes2 {
+    display: flex;
+    padding: 80px;
+    align-items: center;
+    flex-direction: row-reverse; /* Cambia el orden de imagen y descripción */
+}
+
+.descripcion2 {
+
+    letter-spacing:2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 300px; /* Espaciado horizontal en la descripción */
+}
+
+.descripcion2 .pais2 {
+    margin-bottom: 29px;
+    font-size: 45px;
+    color: #58cbbe;
+    
+}
+
+.descripcion2 .tiempo2 {
+    margin: 10px;
+}
+
+.caja-precio2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: orange;
+}
+
+.descripcion2 i {
+    padding: 3px;
+}
+
+@media (max-width: 768px) {
+    .caja-viajes2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .descripcion2 {
+        text-align: left; /* Alinea el texto a la izquierda en pantallas pequeñas */
+        padding: 20px;
+    }
+    .precios2{
+      padding: 20px;
+    }
+
+}
+
+
+
+/* parte dos luna de miel */
+/*ofertas-------------  */
+
+
+.card {
+    width: calc(33.33% - 20px);
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card h2 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .card p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  
+  /*-----------------------Luna de miel version ofertas ----------*/
+  .header-lunademiel{
+    display: flex;
+  justify-content:center;
+  font-weight: 100;
+  }
+
+
+  .h-lunademiel{
+    font-size: 60px;
+    font-weight: 100;
+    color: #58cbbe;
+  }
+
+ 
+  .container-lunademiel{
+    gap: 90px;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    padding:160px 200px;
+    
+    
+}
+  .card{
+    display:flex;
+    flex-direction:column;
+    width:400px;
+    margin-bottom:60px;
+      border: none;
+      justify-content: center;
+       
+     }
+  .card>div{
+    box-shadow:0 15px 20px 0 rgba(0,0,0,0.5);
+    
+  }
+  .card-image{
+    width:400px;
+    height:250px;
+    
+    
+  }
+  .card-image:hover{
+    background-color: #58cbbe;
+   
+  }
+  
+
+
+  .card-image>img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:bottom;
+    
+    
+  }
+  .card-text{
+    color: #fff;
+    border-radius: 5px;
+    margin:-40px auto;
+    margin-bottom:-10px;
+    height:100px;
+    width:300px;
+    background-color:#75bccb;
+    padding:10px 20px;
+  }
+
+  .card-text:hover{
+    transform: scale(1.1);
+
+  }
+
+  .card-meal-type{
+    font-style:italic;
+   
+    
+    
+  }
+  
+  .card-body{
+    font-size:1.25rem;
+  }
+ 
+
+
+  @media (max-width: 768px){
+    .container-lunademiel{
+        padding: 0;
+    }
+  .lunademiel{
+    padding:0px 30px;
+  }
+  .h-lunademiel{
+    padding: 90px 25px;
+
+  }
+
+
+}
+
+
+/*  */
+
+
+html {
+  font-family: 'Montserrat', Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: white;
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, select, textarea {
+  color: #5A5A5A;
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+textarea {
+  overflow: auto;
+}
+
+#container {
+  border: solid 3px #474544;
+  max-width: 768px;
+  margin: 60px auto;
+  position: relative;
+}
+
+form {
+  padding: 37.5px;
+  margin: 50px 0;
+}
+
+.h2-contact {
+  color: #474544;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+.underline {
+  border-bottom: solid 1px #474544;
+  margin: -0.512em auto;
+  width: 80px;
+}
+
+.icon_wrapper {
+  margin: 50px auto 0;
+  width: 100%;
+}
+
+.icon-contact{
+  display: block;
+  fill: #474544;
+  height: 70px;
+  margin: 0 auto;
+  width: 70px;
+}
+
+.email {
+    float: right;
+    width: 45%;
+}
+
+input[type='text'], [type='email'], select, textarea {
+    background: none;
+  border: none;
+    border-bottom: solid 2px #474544;
+    color: #474544;
+    font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+    margin: 0em 0 1.875em 0;
+    padding: 0 0 0.875em 0;
+  text-transform: uppercase;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input[type='text']:focus, [type='email']:focus, textarea:focus {
+    outline: none;
+    padding: 0 0 0.875em 0;
+}
+
+.message {
+    float: none;
+}
+
+.name {
+    float: left;
+    width: 45%;
+}
+
+select {
+  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+  outline: none;
+ 
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.subject {
+  width: 100%;
+}
+
+.telephone {
+  width: 100%;
+}
+
+textarea {
+    line-height: 150%;
+    height: 150px;
+    resize: none;
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+    color: #474544;
+}
+
+:-moz-placeholder { 
+    color: #474544;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: #474544;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #474544;
+}
+
+#form_button {
+  background: none;
+  border: solid 2px #474544;
+  color: #474544;
+  cursor: pointer;
+  display: inline-block;
+  
+  
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#form_button:hover {
+  background: #474544;
+  color: #F2F3EB;
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    margin: 50px auto 0;
+    width: 100%;
+  }
+  .name,
+  .email{
+    float: left;
+    width: 45%;
+  }
+  .telephone{
+    width: 100%;
+  }
+  .icon_wrapper {
+    text-align: center;
+}
+.name,
+.email {
+    float: none;
+    width: 100%;
+}
+.contacto{
+  padding: 10px;
+}
+}
+
+
+@media screen and (max-width: 480px) {
+  .h2-contact {
+    font-size: 26px;
+  }
+  
+  .underline {
+    width: 68px;
+  }
+  
+  #form_button {
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .h2-contact {
+    font-size: 18px;
+  }
+  
+  .icon-contact {
+    height: 35px;
+    width: 35px;
+  }
+  
+  .underline {
+    width: 53px;
+  }
+  
+  input[type='text'], [type='email'], select, textarea {
+    font-size: 0.875em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+
+
+
+
+.footer{
+    background:#000;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .row .ircasa{
+        color: orange;
+        font-size: 20px;
+        border: 1px solid orange;
+        padding: 12px;
+    }
+
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+
+
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+
+
+    /* LUNA DE MIEL----------------- */
+
+
+
+    .titulo-hm{
+        display: flex;
+        justify-content: center;
+        color: #58cbbe;
+        font-size: 60px;
+        font-weight: 100;
+        margin: 130px;
+        
+    }
+    .caja-p-hm{
+        display: flex;
+        justify-content: center;
+        margin: 0 600px;
+        font-size: 20px;
+        font-weight: 200;
+       
+
+    }
+
+    .padre-inspiracion-personalizado{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      
+      .card-inspiracion-personalizado{
+        margin: 280px 0;
+       height: 770px;
+       width: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      
+        
+        align-items: center;
+      }
+      .img-inspiracion{
+        width: 350px;
+        height: 550px;
+        padding: 20px 0;
+       }
+
+       
+       .box-img-personalizado{
+        background-color: #cdc6ab;;
+        width: 349px;
+        border-radius: 10px;
+     
+       }
+
+
+
+
+      .titulo-ispiracion-boton{
+        width: 230px;
+        height: 70px;
+        background-color: #cdc6ab;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        font-size: 25px;
+        box-shadow: 1px 2px 3px rgb(97, 88, 88);
+        position: absolute;
+        margin: 499px;
+        
+      }
+      
+      .caja-p-inspiracion{
+        display: flex;
+        justify-content: center;
+        padding: 21px;
+        background-color: #95d8d0;
+        border-radius: 10px;
+        box-shadow: 1px 2px 3px rgb(97, 88, 88);
+        margin: 6px;
+        width: 400px;
+      }
+
+
+      @media (max-width: 768px){
+        .titulo-hm{
+            margin: 50px;
+            font-size: 45px;
+        }
+        .caja-p-hm{
+            margin: 16px;
+            font-size: 17px;
+
+        }
+        .card-inspiracion-personalizado{
+            margin: 55px;
+       
+        }
+       
+      }
